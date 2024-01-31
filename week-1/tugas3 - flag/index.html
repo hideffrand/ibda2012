@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Flag</title>
+  </head>
+  <body>
+    <img src="./assets/us-flag.jpg" alt="" id="display-image" />
+    <div class="button-container">
+      <button onclick="handleClick('indo')">Indonesia</button>
+      <button onclick="handleClick('usa')">USA</button>
+      <button onclick="handleClick('russia')">Russia</button>
+    </div>
+    <script>
+      const images = {
+        indo: "./assets/indo-flag.jpg",
+        usa: "./assets/us-flag.jpg",
+        russia: "./assets/russian-flag.jpg",
+      };
+
+      function handleClick(country) {
+        document.getElementById("display-image").src = images[country];
+      }
+    </script>
+  </body>
+</html>
